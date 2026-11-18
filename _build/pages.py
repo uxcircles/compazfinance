@@ -53,7 +53,7 @@ def head(page, title, desc):
 <div class="concept"><div class="wrap">
 <span class="tag">Concept / 概念</span>
 <span>{L('Redesign concept. Not the official Compaz Finance website.','网站改版概念，并非 Compaz Finance 官方网站。')} <a href="{OFFICIAL}">{L('Visit the official site','前往官方网站')}</a></span>
-<a class="by" href="https://ux-circles.com/professionals">{L('Designed by UX CIRCLES','由 UX CIRCLES 设计')} ↗</a>
+<a class="by" href="https://ux-circles.com/professionals" target="_blank" rel="noopener">{L('Designed by UX CIRCLES','设计：UX CIRCLES')} ↗</a>
 </div></div>
 """
 
@@ -114,7 +114,7 @@ def footer():
 f'如需投诉，请发电邮至 <a href="mailto:{EMAIL}">{EMAIL}</a>，我们可按要求提供投诉处理程序摘要。如投诉未能解决，您可能有权转交<a href="https://www.financial-ombudsman.org.uk">金融申诉专员服务机构</a>（0800 023 4567）。')}</p>
 <p>{L('The guidance on this website is subject to the UK regulatory regime and is aimed at consumers based in the UK.','本网站内容受英国监管制度约束，面向居住在英国的消费者。')}
 Compaz Finance Ltd · {L('Registered in England & Wales','英格兰及威尔士注册')} 12961319 · {L('Registered office','注册地址')}: 71-75 Shelton Street, London WC2H 9JQ</p>
-<p class="concept-line">{L('Unofficial redesign concept by','非官方网站改版概念，设计：')} <a href="https://ux-circles.com/professionals">UX CIRCLES</a> · © 2026</p>
+<p class="concept-line">{L('Unofficial redesign concept by ','非官方概念设计：')}<a href="https://ux-circles.com/professionals" target="_blank" rel="noopener">UX CIRCLES</a> · © 2026</p>
 </div>
 </div></footer>
 <nav class="mbar" aria-label="{L('Quick actions','快捷操作')}">
