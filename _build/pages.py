@@ -4,7 +4,7 @@ Run: python3 _build/pages.py  (then python3 _build/fonts.py after Chinese text c
 import os, html, json
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V = "6"  # cache-bust; bump on every CSS/JS change
+V = "7"  # cache-bust; bump on every CSS/JS change
 OFFICIAL = "https://www.compazfinance.co.uk/"
 PHONE_TEL = "+447775330483"
 PHONE_SHOW = "07775 330483"
