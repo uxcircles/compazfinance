@@ -1,16 +1,15 @@
-@font-face{font-family:"Alegreya";src:url(fonts/alegreya.woff2) format("woff2");font-weight:400 900;font-display:swap}
+@font-face{font-family:"Red Hat Display";src:url(fonts/redhatdisplay.woff2) format("woff2");font-weight:400 900;font-display:swap}
 @font-face{font-family:"Onest";src:url(fonts/onest.woff2) format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"DM Mono";src:url(fonts/dmmono-400.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"DM Mono";src:url(fonts/dmmono-500.woff2) format("woff2");font-weight:500;font-display:swap}
 @font-face{font-family:"Noto Sans SC Sub";src:url(fonts/notosanssc.woff2) format("woff2");font-weight:400 700;font-display:swap}
-@font-face{font-family:"Noto Serif SC Sub";src:url(fonts/notoserifsc.woff2) format("woff2");font-weight:600;font-display:swap}
 
 :root{
   --ink:#17150f;--ink-2:#24211a;--ink-3:#3a362c;
   --paper:#ffffff;--chart:#f3f2ee;--line:#dcd9d0;
   --orange:#f7931e;--orange-deep:#a65300;--orange-wash:#fff3e3;
   --muted:#5d5a52;--on-ink:#f3efe6;--on-ink-muted:#b9b3a5;
-  --serif:"Alegreya","Noto Serif SC Sub",Georgia,serif;
+  --display:"Red Hat Display","Noto Sans SC Sub",system-ui,sans-serif;
   --sans:"Onest","Noto Sans SC Sub",system-ui,sans-serif;
   --mono:"DM Mono",ui-monospace,monospace;
   --head:64px;--wrap:1180px;
@@ -21,13 +20,14 @@ body{margin:0;overflow-x:clip;font-family:var(--sans);font-size:17px;line-height
 :lang(zh-Hans) body,body:lang(zh-Hans){font-size:16.5px;line-height:1.8}
 img,svg{max-width:100%;display:block}
 a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em;margin:0 0 .5em}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;letter-spacing:-.02em;margin:0 0 .5em}
 :lang(zh-Hans) h1,:lang(zh-Hans) h2,:lang(zh-Hans) h3{letter-spacing:.02em;line-height:1.3}
 h2{font-size:clamp(1.9rem,4vw,2.9rem)}
 h3{font-size:1.4rem}
 p{margin:0 0 1em}
 .wrap{width:min(var(--wrap),100% - 32px);margin-inline:auto}
 .mono{font-family:var(--mono)}
+.nw{white-space:nowrap}
 .skip{position:absolute;left:-999px;top:0;background:var(--orange);color:var(--ink);padding:10px 14px;z-index:100}
 .skip:focus{left:8px;top:8px}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px}
@@ -99,7 +99,7 @@ p{margin:0 0 1em}
 .bearings button[aria-pressed=true] .deg{color:var(--orange)}
 .bearings button:hover{border-color:#6d6656}
 .tool-form fieldset{border:0;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;align-content:start}
-.tool-form legend{font-family:var(--serif);font-size:1.45rem;color:#fff;margin-bottom:6px;padding:0;grid-column:1/-1}
+.tool-form legend{font-family:var(--display);font-size:1.45rem;color:#fff;margin-bottom:6px;padding:0;grid-column:1/-1}
 .tool-form .lead{grid-column:1/-1;color:var(--on-ink-muted);font-size:.95rem;margin:-6px 0 2px}
 .field label{display:block;font-size:13px;color:var(--on-ink-muted);margin-bottom:4px}
 .field .in{display:flex;align-items:center;background:var(--ink);border:1px solid var(--ink-3);border-radius:8px;padding:0 10px}
@@ -185,7 +185,7 @@ p{margin:0 0 1em}
 
 /* founder */
 .founder{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px;align-items:start}
-.founder blockquote{margin:0;font-family:var(--serif);font-size:clamp(1.45rem,2.6vw,2rem);line-height:1.3}
+.founder blockquote{margin:0;font-family:var(--display);font-weight:500;letter-spacing:-.01em;font-size:clamp(1.45rem,2.6vw,2rem);line-height:1.3}
 .founder blockquote footer{font-family:var(--sans);font-size:.95rem;color:var(--muted);margin-top:14px}
 .facts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .facts li{display:grid;grid-template-columns:120px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}

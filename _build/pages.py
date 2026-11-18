@@ -4,7 +4,7 @@ Run: python3 _build/pages.py  (then python3 _build/fonts.py after Chinese text c
 import os, html, json
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V = "9"  # cache-bust; bump on every CSS/JS change
+V = "11"  # cache-bust; bump on every CSS/JS change
 OFFICIAL = "https://www.compazfinance.co.uk/"
 PHONE_TEL = "+447775330483"
 PHONE_SHOW = "07775 330483"
@@ -43,7 +43,7 @@ def head(page, title, desc):
 <link rel="alternate" hreflang="en-GB" href="{alt_en}">
 <link rel="alternate" hreflang="zh-Hans" href="{alt_sc}">
 <link rel="icon" href="{asset('img/compass.svg')}" type="image/svg+xml">
-<link rel="preload" href="{asset('fonts/alegreya.woff2')}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{asset('fonts/redhatdisplay.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{asset('fonts/dmmono-500.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{asset('site.css')}?v={V}">
 <meta name="theme-color" content="#17150f">
@@ -309,7 +309,7 @@ def page_index():
 <section class="hero" aria-labelledby="h1">
 <div class="wrap">
 <p class="hero-meta">{L('Mortgage &amp; protection broker · Orpington · English and 普通话','房贷与保障经纪 · 伦敦 Orpington · 英语及普通话')}</p>
-<h1 id="h1">{L('Find your bearing in the mortgage maze','在英国贷款买房，先定方向')}</h1>
+<h1 id="h1">{L('Find your bearing in the mortgage maze','在英国贷款买房，<span class="nw">先定方向</span>')}</h1>
 <p class="hero-sub">{L('Lily Liu set up Compaz Finance in 2020 to guide homeowners, landlords and investors through UK mortgages, in English and Mandarin. Pick where you are heading and see the numbers first.',
 'Lily Liu 于2020年创立 Compaz Finance，用中英双语为自住业主、房东和投资者解答英国房贷的大小问题。先选择您的方向，看看大概的数字。')}</p>
 {tool()}
