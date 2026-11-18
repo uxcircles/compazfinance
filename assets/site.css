@@ -34,11 +34,15 @@ p{margin:0 0 1em}
 .small{font-size:.86rem;color:var(--muted)}
 
 /* concept bar */
-.concept{background:#000;color:#e9e5dc;font-size:13px;line-height:1.4}
-.concept .wrap{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;padding:8px 0}
-.concept .tag{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid #6b665a;padding:2px 6px;border-radius:3px}
+.concept{background:#000;color:#d9d4c8;font-size:13px;line-height:1.4}
+.concept .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:36px;padding:6px 0}
+.concept p{margin:0;display:flex;gap:10px;align-items:center;min-width:0}
+.concept .tag{flex:none;background:var(--orange);color:var(--ink);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px}
 .concept a{color:#fff}
-.concept .by{margin-left:auto;color:var(--orange);text-decoration:none;font-weight:500}
+.concept .by{flex:none;white-space:nowrap;text-decoration:none}
+.concept .by strong{letter-spacing:.06em}
+.concept .by:hover{color:var(--orange)}
+@media (max-width:640px){.concept-long,.concept-by{display:none}}
 
 /* header */
 .site-head{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);height:var(--head)}

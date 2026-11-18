@@ -4,7 +4,7 @@ Run: python3 _build/pages.py  (then python3 _build/fonts.py after Chinese text c
 import os, html, json
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V = "5"  # cache-bust; bump on every CSS/JS change
+V = "6"  # cache-bust; bump on every CSS/JS change
 OFFICIAL = "https://www.compazfinance.co.uk/"
 PHONE_TEL = "+447775330483"
 PHONE_SHOW = "07775 330483"
@@ -50,10 +50,9 @@ def head(page, title, desc):
 </head>
 <body>
 <a class="skip" href="#main">{L('Skip to content','跳到正文')}</a>
-<div class="concept"><div class="wrap">
-<span class="tag">Concept / 概念</span>
-<span>{L('Redesign concept. Not the official Compaz Finance website.','网站改版概念，并非 Compaz Finance 官方网站。')} <a href="{OFFICIAL}">{L('Visit the official site','前往官方网站')}</a></span>
-<a class="by" href="https://ux-circles.com/professionals">{L('Designed by UX CIRCLES','由 UX CIRCLES 设计')} ↗</a>
+<div class="concept" role="note"><div class="wrap">
+<p><span class="tag">{L('Concept','概念')}</span><span class="concept-long">{L('Redesign concept. Not the','网站改版概念，并非')} <a href="{OFFICIAL}">{L('official Compaz Finance website','Compaz Finance 官方网站')}</a>{L('.','。')}</span></p>
+<a class="by" href="https://ux-circles.com/professionals"><span class="concept-by">{L('Designed by ','设计：')}</span><strong>UX CIRCLES</strong> ↗</a>
 </div></div>
 """
 
