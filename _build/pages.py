@@ -4,10 +4,9 @@ Run: python3 _build/pages.py  (then python3 _build/fonts.py after Chinese text c
 import os, html, json
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V = "11"  # cache-bust; bump on every CSS/JS change
+V = "12"  # cache-bust; bump on every CSS/JS change
 OFFICIAL = "https://www.compazfinance.co.uk/"
-PHONE_TEL = "+447775330483"
-PHONE_SHOW = "07775 330483"
+# No phone: Compaz Finance has hidden its number on the official site, so the concept does not publish it
 EMAIL = "info@compazfinance.co.uk"
 
 LANG = "en"
@@ -70,7 +69,7 @@ def header(page):
 {nav('about', L('About Lily','关于 Lily'))}
 {nav('contact', L('Contact','联系'))}
 <a class="lang" href="{href(target, other)}" lang="{L('zh-Hans','en')}" hreflang="{L('zh-Hans','en')}">{L('简体中文','English')}</a>
-<a class="btn btn-ink head-call" href="tel:{PHONE_TEL}">{PHONE_SHOW}</a>
+<a class="btn btn-ink head-call" href="{href('contact')}">{L('Ask Lily','咨询 Lily')}</a>
 </nav>
 </div></header>
 <main id="main">
@@ -88,7 +87,6 @@ def footer():
 <div>
 <h2>{L('Talk to us','联系我们')}</h2>
 <ul>
-<li><a href="tel:{PHONE_TEL}">{PHONE_SHOW}</a></li>
 <li><a href="mailto:{EMAIL}">{EMAIL}</a></li>
 <li>37 Hillcrest Road, Orpington, BR6 9AN</li>
 </ul>
@@ -117,7 +115,6 @@ Compaz Finance Ltd · {L('Registered in England & Wales','英格兰及威尔士�
 </div>
 </div></footer>
 <nav class="mbar" aria-label="{L('Quick actions','快捷操作')}">
-<a href="tel:{PHONE_TEL}">{L('Call','致电')}</a>
 <a href="mailto:{EMAIL}">{L('Email','电邮')}</a>
 <a class="go" href="{href('contact')}">{L('Ask Lily','咨询 Lily')}</a>
 </nav>
@@ -367,7 +364,7 @@ def contact_band():
     return f"""<section class="contact-band" aria-labelledby="h-band"><div class="wrap">
 <h2 id="h-band">{L('Not sure which way to go? Ask Lily','不确定往哪个方向走？问问 Lily')}</h2>
 <div class="acts">
-<a class="btn btn-ink" href="tel:{PHONE_TEL}">{L('Call','致电')} {PHONE_SHOW}</a>
+<a class="btn btn-ink" href="mailto:{EMAIL}">{L('Email Lily','发电邮给 Lily')}</a>
 <a class="btn btn-line" href="{href('contact')}">{L('Send a message','留言咨询')}</a>
 </div></div></section>"""
 
@@ -428,7 +425,7 @@ def page_contact():
     opts += f'<option value="protect">{L("Life insurance and protection","人寿保险与保障")}</option><option value="other">{L("Something else","其他")}</option>'
     return f"""<section class="page-head"><div class="wrap">
 <h1>{L('How can we help you?','我们可以怎样帮您？')}</h1>
-<p>{L('Call, email or send a message in English or Chinese. Lily will reply personally.','可以致电、发电邮或留言，中英文皆可。Lily 会亲自回复。')}</p>
+<p>{L('Email or send a message, in English or Chinese.','可以发电邮或留言，中英文皆可。')}</p>
 </div></section>
 <section class="sec"><div class="wrap contact-grid">
 <form class="form" id="enquiry" novalidate>
@@ -443,12 +440,11 @@ def page_contact():
 </form>
 <div>
 <ul class="ways">
-<li><span class="k">{L('Phone','电话')}</span><a href="tel:{PHONE_TEL}">{PHONE_SHOW}</a></li>
 <li><span class="k">{L('Email','电邮')}</span><a href="mailto:{EMAIL}">{EMAIL}</a></li>
 <li><span class="k">{L('Office','办公地址')}</span>37 Hillcrest Road<br>Orpington BR6 9AN</li>
 <li><span class="k">{L('Languages','语言')}</span>{L('English and Mandarin','英语、普通话')}</li>
 </ul>
-<p class="small" style="margin-top:18px">{L('Most advice happens by phone and video call, so you can be anywhere in the UK. Please call before visiting.','大部分咨询通过电话或视频进行，无论您在英国哪里都可以。到访前请先致电预约。')}</p>
+<p class="small" style="margin-top:18px">{L('Clients come from across the UK. Please get in touch before visiting.','客户遍布英国各地。到访前请先联系预约。')}</p>
 </div>
 </div></section>"""
 
@@ -482,7 +478,7 @@ META = {
     "about": (("About Lily Liu · Compaz Finance", "关于 Lily Liu · Compaz Finance"),
               ("Founded in 2020 by Lily Liu. Bilingual mortgage advice for homeowners, landlords and investors.", "2020年由 Lily Liu 创立，为业主、房东和投资者提供双语房贷建议。")),
     "contact": (("Contact · Compaz Finance", "联系 · Compaz Finance"),
-                ("Call, email or send a message in English or Chinese.", "致电、电邮或留言，中英文皆可。")),
+                ("Email or send a message, in English or Chinese.", "发电邮或留言，中英文皆可。")),
     "privacy": (("Privacy · Compaz Finance", "隐私 · Compaz Finance"), ("How your personal details are handled.", "我们如何处理您的个人资料。")),
     "404": (("Page not found · Compaz Finance", "找不到页面 · Compaz Finance"), ("Page not found.", "找不到页面。")),
 }

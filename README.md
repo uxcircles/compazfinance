@@ -35,8 +35,8 @@ python3 _build/fonts.py   # 修改中文字後，重新擷取 Noto Sans SC 子�
 
 ## 需要 Compaz Finance 確認
 
-- 電話 07775 330483 是否可以用 WhatsApp（目前網站沒有放 WhatsApp）
-- 37 Hillcrest Road, Orpington 是否接待到訪客戶（目前寫「到訪前請先致電」）
+- 是否要公開電話：官網 Contact 頁把電話 07775 330483 放在 HTML 註解裡隱藏了，所以概念網站完全不顯示電話，只用電郵和留言
+- 37 Hillcrest Road, Orpington 是否接待到訪客戶（目前寫「到訪前請先聯絡預約」）
 - Lily 的中文名字（網站沒有提供，因此中文版只寫 Lily Liu）
 - 「Remortgage」作為獨立服務是否合適（原網站寫在 Mortgaging 內）
 - 試算工具中的示例利率（4.5%、5.2%、0.85%/月等）只是可修改的預設值，不是報價
